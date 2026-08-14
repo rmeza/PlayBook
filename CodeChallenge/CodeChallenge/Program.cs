@@ -18,8 +18,13 @@ namespace CodeChallenge
             //Balanced.TestBalanced("[{}]");
 
             // Palindrome.TestPalindrome("Anita lava la tina");
-            Console.WriteLine(Reverse.ReverseString("HOla"));
-            Console.WriteLine(Reverse.ReverseEachWord("HOla mundo"));
+        //    Console.WriteLine(Reverse.ReverseString("HOla"));
+          //  Console.WriteLine(Reverse.ReverseEachWord("HOla mundo"));
+
+        string sample = "swiss";
+        char? result = Basic.FindFirstNonRepeatingChar(sample);
+        Console.WriteLine(result.HasValue ? $"First non-repeating char: {result}" : "No unique char found");
+
         }
         
     }

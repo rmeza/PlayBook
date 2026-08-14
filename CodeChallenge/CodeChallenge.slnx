@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CodeChallenge/CodeChallenge.csproj" />
+  <Project Path="CodeChallengeTests/CodeChallengeTests.csproj" />
+</Solution>

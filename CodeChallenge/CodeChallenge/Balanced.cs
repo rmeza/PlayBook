@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CodeChallenge
 {
-    internal class Balanced
+    public class Balanced
     {
 
         public static void TestBalanced(string word)

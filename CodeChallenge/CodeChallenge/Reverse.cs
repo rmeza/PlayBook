@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodeChallenge
 {
-    internal class Reverse
+    public class Reverse
     {
         /// <summary>
         /// Variación A: Revertir todo el texto en su lugar (In-Place)

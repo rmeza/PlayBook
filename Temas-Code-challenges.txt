@@ -1,0 +1,68 @@
+
+Here are some topic-wise coding problems that are commonly asked and highly recommended for practice:
+
+🔹 String-Based Questions
+Practice solving common string problems such as:
+Check whether a string is a palindrome
+Find the first non-repeating character
+Count the frequency of each character
+Remove duplicate characters from a string
+Check if two strings are anagrams
+Implement string compression (example: aaabb → a3b2)
+Find the longest substring without repeating characters
+Convert a string into title case without using built-in functions
+Create a custom StringBuilder-like functionality
+Reverse a string without using built-in methods
+
+
+🔹 Array-Based Questions
+Strengthen your array handling skills by practicing:
+Finding the second largest element
+Moving all zeros to the end of an array
+Identifying a missing number in a sequence (1 to n)
+Finding duplicate elements
+Merging two sorted arrays
+Sorting arrays without using built-in sort methods
+
+🔹 Collections & LINQ
+LINQ-based questions are very common in .NET interviews:
+Group employees by department
+Find the top 3 highest salaries
+Remove duplicates using LINQ
+Calculate frequency of elements
+Implement pagination using LINQ
+Perform dynamic sorting (ascending/descending)
+Identify common elements between two lists
+
+🔹 Recursion-Based Problems
+Recursion is often tested to evaluate logical thinking:
+Calculate factorial using recursion
+Generate Fibonacci series
+Reverse a string using recursion
+Find sum of digits
+Implement binary search recursively
+Solve Tower of Hanoi
+Check palindrome using recursion
+
+🔹 Multithreading & Async Programming
+Modern .NET roles often include concurrency concepts:
+Print numbers using multiple threads
+Implement parallel processing
+Call multiple APIs asynchronously
+Prevent race conditions using locks
+Implement thread-safe singleton pattern
+Demonstrate deadlock scenarios
+Use CancellationToken
+Perform file processing using async methods
+
+🔹 Data Structures (Highly Important)
+These topics are essential for backend and full-stack roles:
+Implement stack using arrays
+Implement queue using two stacks
+Reverse a linked list
+Detect loop in linked list
+Insert nodes in a binary search tree
+Perform graph traversal
+
+💡 Pro Tip:
+Focus on writing optimized and clean code, and always be ready to explain your logic step-by-step during interviews.

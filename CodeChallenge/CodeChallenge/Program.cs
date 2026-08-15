@@ -22,8 +22,8 @@ namespace CodeChallenge
           //  Console.WriteLine(Reverse.ReverseEachWord("HOla mundo"));
 
         string sample = "swiss";
-        char? result = Basic.FindFirstNonRepeatingChar(sample);
-        Console.WriteLine(result.HasValue ? $"First non-repeating char: {result}" : "No unique char found");
+        string result = StringCompression.Compression(sample);
+        Console.WriteLine(result);
 
         }
         

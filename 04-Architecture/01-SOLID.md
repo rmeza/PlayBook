@@ -34,7 +34,7 @@ graph TD
 
 ```csharp
 // BAD: Rompe SRP e ISP
-public interface IOrderProcessor 
+public interface IOrderProcessor
 {
     void ProcessOrder(Order order);
     void SaveToDatabase(Order order);
@@ -42,17 +42,17 @@ public interface IOrderProcessor
 }
 
 // GOOD: Respetando SRP, ISP y DIP
-public interface IOrderProcessor 
+public interface IOrderProcessor
 {
     Task ProcessAsync(Order order);
 }
 
-public interface IOrderRepository 
+public interface IOrderRepository
 {
     Task SaveAsync(Order order);
 }
 
-public interface INotificationService 
+public interface INotificationService
 {
     Task SendConfirmationAsync(Order order);
 }
@@ -63,6 +63,15 @@ public interface INotificationService
 ## 5. 🎤 Respuesta de Entrevista en Inglés (Senior/Staff Level)
 
 > **Interviewer:** *"How do you apply SOLID principles in your day-to-day .NET architecture?"*
-
+>
 > **Your Answer:**  
 > "In my daily workflow, SOLID principles are key to maintaining a clean and testable codebase. For instance, I enforce **SRP** by keeping controllers and command handlers thin, delegating business rules to domain services or aggregates. I rely heavily on **DIP** through Dependency Injection, allowing us to swap persistence implementations—like switching from EF Core to Dapper for performance-critical queries—without touching core business logic. Finally, I apply **ISP** to design small, focused contracts that make unit testing with mocks straightforward and resilient to breaking changes."
+
+---
+
+## 📝 Puntos clave para recordar
+
+- SOLID no son reglas a memorizar: cada letra resuelve un síntoma de código frágil.
+- SRP + DIP + ISP son los tres que más impactan la testabilidad.
+- El ejemplo BAD `IOrderProcessor` con 3 responsabilidades viola SRP, ISP y OCP a la vez.
+- Relacionado: ISP en la práctica → `01-OOP-Fundamentals/06-MultipleInterfaceImplementation.md`.

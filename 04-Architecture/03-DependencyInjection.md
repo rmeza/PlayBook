@@ -4,7 +4,7 @@
 
 ## 1. ¿Qué problema resuelve?
 
-Elimina el acoplamiento directo entre clases (`new Class()`), permitiendo inyectar dependencias externamente para mejorar la testabilidad, modularidad y gestión del ciclo de vida de los objetos en memoria.
+Elimina el acoplamiento directo entre clases (`new Class()`), permitiendo inyectar dependencias externamente para mejorar la **testabilidad**, **modularidad** y **gestión del ciclo de vida** de los objetos en memoria.
 
 ---
 
@@ -47,6 +47,15 @@ builder.Services.AddSingleton<ICacheService, RedisCacheService>();
 ## 5. 🎤 Respuesta de Entrevista en Inglés (Senior/Staff Level)
 
 > **Interviewer:** *"What is a Captive Dependency and how do you avoid it in .NET?"*
-
+>
 > **Your Answer:**  
 > "A Captive Dependency occurs when a service with a longer lifetime holds onto a service with a shorter lifetime—for example, when a **Singleton** service injects a **Scoped** service like `DbContext`. This keeps the scoped object alive indefinitely, leading to memory leaks and thread-safety bugs. To avoid this, I use the `IServiceScopeFactory` to explicitly create a scope inside the Singleton when I need to interact with scoped resources."
+
+---
+
+## 📝 Puntos clave para recordar
+
+- Transient = nueva instancia por solicitud; Scoped = por request; Singleton = única global.
+- `DbContext` es **Scoped** (nunca Singleton: statefulness, threading, memory leaks).
+- Captive Dependency = Singleton → Scoped = fuga de memoria + bugs de concurrencia.
+- DIP (principio) vs DI (mecanismo): ver `07-Interview/01-Pitch-Sheet-Senior.md` (Módulo B, #9).

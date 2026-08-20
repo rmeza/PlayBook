@@ -1,0 +1,31 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "zen/deepseek-v4-flash-free",
+  "agent": {
+    "spec-planner": {
+      "model": "zen/nemotron-3-ultra-free",
+      "description": "Planeación de arquitectura, diseño de specs y contratos de API.",
+      "mode": "subagent"
+    },
+    "implementer": {
+      "model": "zen/deepseek-v4-flash-free",
+      "description": "Implementación de código y pruebas unitarias de forma rápida.",
+      "mode": "subagent"
+    },
+    "code-reviewer": {
+      "model": "zen/laguna-s-2.1-free",
+      "description": "Auditoría de diffs, detección de bugs y verificación de estándares.",
+      "mode": "subagent"
+    },
+    "build": {
+      "permission": {
+        "task": {
+          "*": "deny",
+          "spec-planner": "allow",
+          "implementer": "allow",
+          "code-reviewer": "allow"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Node / Ionic
+node_modules/
+www/
+.android/
+ios/
+
+# Secrets
+*.env
+.env
+*.local.json
+appsettings.Development.json
+
+# IDE
+.idea/
+*.swp

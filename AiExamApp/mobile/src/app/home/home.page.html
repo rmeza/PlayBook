@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>AiExamApp</ion-title>
+    <ion-select
+      slot="end"
+      [ngModel]="selectedModel"
+      placeholder="Modelo"
+      (ionChange)="changeModel($event)"
+    >
+      <ion-select-option *ngFor="let m of models" [value]="m.id">
+        {{ m.name }}{{ m.free ? ' (free)' : '' }}
+      </ion-select-option>
+    </ion-select>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="status-bar">
+    <ion-chip color="{{ listening ? 'success' : processing ? 'warning' : 'medium' }}">
+      <ion-label>
+        {{ listening ? 'Escuchando…' : processing ? 'Procesando…' : 'En pausa' }}
+      </ion-label>
+    </ion-chip>
+
+    <ion-chip (click)="toggleTts()" color="{{ ttsEnabled ? 'primary' : 'medium' }}">
+      <ion-label>TTS</ion-label>
+    </ion-chip>
+
+    <ion-chip (click)="toggleAutoSend()" color="{{ autoSendEnabled ? 'primary' : 'medium' }}">
+      <ion-label>Auto-envío {{ autoSendEnabled ? 'ON' : 'OFF' }}</ion-label>
+    </ion-chip>
+  </div>
+
+  <div class="transcript-card">
+    <p class="transcript" [class.placeholder]="!transcript && !error">
+      {{ transcript || 'Habla tu pregunta… se enviará sola al hacer una pausa.' }}
+    </p>
+    <p class="error" *ngIf="error">{{ error }}</p>
+  </div>
+
+  <div class="mic-zone">
+    <ion-fab-button (click)="toggleListening()" color="{{ listening ? 'danger' : 'primary' }}">
+      <ion-icon [name]="listening ? 'mic-off' : 'mic'" size="large"></ion-icon>
+    </ion-fab-button>
+  </div>
+
+  <ion-button expand="block" (click)="sendManual()" [disabled]="!transcript.trim()">
+    Enviar ahora
+  </ion-button>
+
+  <div class="answer-card" *ngIf="answer">
+    <p class="answer-model">
+      {{ answer.model }} · {{ answer.elapsedMs }} ms
+    </p>
+    <p class="answer">{{ answer.answer }}</p>
+  </div>
+</ion-content>

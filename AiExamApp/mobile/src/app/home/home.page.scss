@@ -1,0 +1,53 @@
+.status-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px;
+}
+
+.transcript-card {
+  margin: 16px 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--ion-color-light);
+  min-height: 120px;
+}
+
+.transcript {
+  font-size: 1.15rem;
+  margin: 0;
+
+  &.placeholder {
+    color: var(--ion-color-medium);
+  }
+}
+
+.error {
+  color: var(--ion-color-danger);
+  margin-top: 8px;
+}
+
+.mic-zone {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.answer-card {
+  margin: 20px 12px;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--ion-color-tertiary-tint);
+}
+
+.answer-model {
+  font-size: 0.75rem;
+  color: var(--ion-color-medium);
+  margin: 0 0 8px;
+}
+
+.answer {
+  font-size: 1.05rem;
+  margin: 0;
+  white-space: pre-wrap;
+}

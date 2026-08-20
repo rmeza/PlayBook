@@ -46,6 +46,10 @@ PlayBook/
 ├── 07-Interview/
 │   ├── 00-InterviewAnswers-CheatSheet.md
 │   └── 01-Pitch-Sheet-Senior.md
+├── 08-CheatSheet/
+│   └── 00-Master-CheatSheet.md     <- Cheat sheet maestro (incluye Big O)
+├── 09-Frontend/
+│   └── 00-Frontend-CheatSheet.md   <- Cheat sheet JS + Angular (integrado a .NET)
 └── _archivo-pdfs/                  <- PDFs originales (respaldo, contenido ya en .md)
 ```
 
@@ -125,6 +129,8 @@ PlayBook/
 
 - `07-Interview/00-InterviewAnswers-CheatSheet.md` — Q&A rápidos en inglés con enlaces a cada tema.
 - `07-Interview/01-Pitch-Sheet-Senior.md` — Pitch de 30 segundos por tema + cheat sheet de decisión.
+- **`08-CheatSheet/00-Master-CheatSheet.md`** — ⭐ Cheat sheet maestro de examen: mapa de decisión visual, los 7 módulos condensados, **Big O Notation** y respuestas clave en inglés.
+- **`09-Frontend/00-Frontend-CheatSheet.md`** — Cheat sheet JS + Angular: componentes, binding, RxJS vs Task, y su integración con tu WebApi .NET (CORS, DTOs, auth).
 
 ---
 
